@@ -15,8 +15,8 @@
  */
 package grails.plugin.springsecurity.oauth
 
-import grails.plugin.springsecurity.SpringSecurityUtils
-import grails.plugin.springsecurity.userdetails.GrailsUser
+import org.codehaus.groovy.grails.plugins.springsecurity.SpringSecurityUtils
+import org.codehaus.groovy.grails.plugins.springsecurity.GrailsUser
 import org.springframework.web.servlet.ModelAndView
 import org.springframework.security.core.context.SecurityContextHolder
 

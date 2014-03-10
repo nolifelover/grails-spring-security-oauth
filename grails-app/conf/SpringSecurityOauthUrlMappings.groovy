@@ -1,4 +1,4 @@
-import grails.plugin.springsecurity.SpringSecurityUtils
+import org.codehaus.groovy.grails.plugins.springsecurity.SpringSecurityUtils
 import org.scribe.exceptions.OAuthException
 import grails.util.Holders
 

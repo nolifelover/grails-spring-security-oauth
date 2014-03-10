@@ -2,7 +2,7 @@ package grails.plugin.springsecurity.oauth
 
 import spock.lang.Specification
 import org.scribe.model.Token
-import grails.plugin.springsecurity.userdetails.GrailsUser
+import org.codehaus.groovy.grails.plugins.springsecurity.userdetails.GrailsUser
 
 /**
  * Unit test for SpringSecurityOAuthController.

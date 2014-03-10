@@ -1,8 +1,6 @@
 grails-spring-security-oauth
 ============================
 
-[![Build Status](https://travis-ci.org/enr/grails-spring-security-oauth.png?branch=master)](https://travis-ci.org/enr/grails-spring-security-oauth)
-
 Adds OAuth-based authentication to the [Spring Security plugin][spring-security-plugin] using the [OAuth plugin][oauth-plugin].
 
 This plugin provides an OAuth realm that can easily be integrated into existing applications and a host of utility functions to make things like "log in with Twitter" almost trivial.
@@ -15,13 +13,9 @@ Please, see [Grails plugin portal][s2oauth-grails-website] for instructions abou
 Changelog
 ---------
 
-**2.1 (not yet released)**
+**2.0.1.1 (for spring-security-core:1.2.7.3)**
 
-Controller and view are not anymore created in the app but are available as plugin artefacts.
-
-View has a configurable layout via `grails.plugin.springsecurity.oauth.layout` configuration key.
-
-**2.0.2**
+This version is maintain support for old spring-security-core 1.2.7.3, fork from [spring-security-oauth-origin] current support version 2.0.2
 
 Version provider's service and token are moved into separate plugin, example:
 
@@ -37,7 +31,7 @@ In `BuildConfig.groovy`, add the dependency to "plugins" section:
 
     plugins {
         //...
-        compile ':spring-security-oauth:2.0.2'
+        compile ':spring-security-oauth:2.0.1.1'
 
         // and also you need add at least one of extensions:
         compile ':spring-security-oauth-facebook:0.1'
@@ -201,3 +195,4 @@ That's it!
 [spring-security-oauth-weibo-plugin]: https://github.com/donbeave/grails-spring-security-oauth-weibo
 [spring-security-oauth-yahoo-plugin]: https://github.com/donbeave/grails-spring-security-oauth-yahoo
 [spring-security-oauth-dailymotion-plugin]: https://github.com/tamershahin/grails-spring-security-oauth-dailymotion
+[spring.security.oauth-origin]: https://github.com/enr/grails-spring-security-oauth

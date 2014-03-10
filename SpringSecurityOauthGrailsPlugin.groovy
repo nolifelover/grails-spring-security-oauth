@@ -1,6 +1,6 @@
 
-import grails.plugin.springsecurity.ReflectionUtils
-import grails.plugin.springsecurity.SpringSecurityUtils
+import org.codehaus.groovy.grails.plugins.springsecurity.ReflectionUtils
+import org.codehaus.groovy.grails.plugins.springsecurity.SpringSecurityUtils
 
 /**
 * @author <a href='mailto:cazacugmihai@gmail.com'>Mihai Cazacu</a>
@@ -8,7 +8,7 @@ import grails.plugin.springsecurity.SpringSecurityUtils
 * @author <a href='mailto:donbeave@gmail.com'>Alexey Zhokhov</a>
 */
 class SpringSecurityOauthGrailsPlugin {
-    def version = "2.1.0-RC2"
+    def version = "2.0.1.2"
     def grailsVersion = "2.0 > *"
     def pluginExcludes = [
             "web-app/*"
@@ -28,8 +28,8 @@ into existing applications and a host of utility functions to make things like "
         [name: "Mihai Cazacu", email: "cazacugmihai@gmail.com"],
         [name: "Enrico Comiti", email: "enrico@comiti.name"],
         [name: "Alexey Zhokhov", email: "donbeave@gmail.com"]]
-    def issueManagement = [system: 'GITHUB', url: 'https://github.com/enr/grails-spring-security-oauth/issues']
-    def scm = [url: 'https://github.com/enr/grails-spring-security-oauth/']
+    def issueManagement = [system: 'GITHUB', url: 'https://github.com/nolifelover/grails-spring-security-oauth/issues']
+    def scm = [url: 'https://github.com/nolifelover/grails-spring-security-oauth/']
 
     def doWithSpring = {
         ReflectionUtils.application = application

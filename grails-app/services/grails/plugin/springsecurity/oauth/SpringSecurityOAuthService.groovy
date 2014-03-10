@@ -1,10 +1,11 @@
 package grails.plugin.springsecurity.oauth
 
-import grails.plugin.springsecurity.SpringSecurityUtils
-import grails.plugin.springsecurity.userdetails.GormUserDetailsService
-import grails.plugin.springsecurity.userdetails.GrailsUser
+import org.codehaus.groovy.grails.plugins.springsecurity.SpringSecurityUtils
+import org.codehaus.groovy.grails.plugins.springsecurity.GormUserDetailsService
+import org.codehaus.groovy.grails.plugins.springsecurity.GrailsUser
+//spring-security-core:3.0.7
+import org.springframework.security.core.authority.GrantedAuthorityImpl
 
-import org.springframework.security.core.authority.SimpleGrantedAuthority
 
 /**
  * Service providing most of the plugin business logic.
@@ -48,7 +49,7 @@ class SpringSecurityOAuthService {
         String authoritiesPropertyName = conf.userLookup.authoritiesPropertyName
         String authorityPropertyName = conf.authority.nameField
         Collection<?> userAuthorities = user."${authoritiesPropertyName}"
-        def authorities = userAuthorities.collect { new SimpleGrantedAuthority(it."${authorityPropertyName}") }
+        def authorities = userAuthorities.collect { new GrantedAuthorityImpl(it."${authorityPropertyName}") }
 
         oAuthToken.principal = new GrailsUser(username, password, enabled, !accountExpired, !passwordExpired,
                 !accountLocked, authorities ?: [GormUserDetailsService.NO_ROLE], user.id)

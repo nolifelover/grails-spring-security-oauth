@@ -24,18 +24,16 @@ grails.project.dependency.resolution = {
     }
 
     plugins {
-        compile ":spring-security-core:2.0-RC2"
+        compile ":spring-security-core:1.2.7.3"
         compile ":oauth:2.4", {
             transitive = false
         }
-        compile ":codenarc:0.20"
+        //compile ":codenarc:0.20"
 
-        build ":release:3.0.1", ":rest-client-builder:1.0.3", {
-            export = false
-        }
+        //build ':release:3.0.0'
     }
 }
-
+/*
 codenarc {
     reports = {
         CodenarcXmlReport('xml') {
@@ -52,3 +50,4 @@ codenarc {
     maxPriority2Violations = 5  // FIX BooleanMethodReturnsNull in controller
     maxPriority3Violations = 5
 }
+*/
