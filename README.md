@@ -34,11 +34,7 @@ In `BuildConfig.groovy`, add the dependency to "plugins" section:
         compile ':spring-security-oauth:2.0.1.2'
 
         // and also you need add at least one of extensions:
-        compile ':spring-security-oauth-facebook:0.2'
         compile ':spring-security-oauth-google:0.2'
-        compile ':spring-security-oauth-linkedin:0.2'
-        compile ':spring-security-oauth-twitter:0.2'
-        compile ':spring-security-oauth-yahoo:0.2'
         //...
     }
 ```
@@ -59,31 +55,6 @@ def baseURL = grails.serverURL ?: "http://localhost:${System.getProperty('server
 oauth {
     debug = true
     providers {
-        facebook {
-            api = org.scribe.builder.api.FacebookApi
-            key = 'oauth_facebook_key'
-            secret = 'oauth_facebook_secret'
-            successUri = '/oauth/facebook/success'
-            failureUri = '/oauth/facebook/error'
-            callback = "${baseURL}/oauth/facebook/callback"
-        }
-        twitter {
-            api = org.scribe.builder.api.TwitterApi
-            key = 'oauth_twitter_key'
-            secret = 'oauth_twitter_secret'
-            successUri = '/oauth/twitter/success'
-            failureUri = '/oauth/twitter/error'
-            callback = "${baseURL}/oauth/twitter/callback"
-        }
-        linkedin {
-            api = org.scribe.builder.api.LinkedInApi
-            key = 'oauth_linkedin_key'
-            secret = 'oauth_linkedin_secret'
-            successUri = '/oauth/linkedin/success'
-            failureUri = '/oauth/linkedin/error'
-            callback = "${baseURL}/oauth/linkedin/callback"
-        }
-
         // for Google OAuth 1.0 DEPRECATED
         google {
             api = org.scribe.builder.api.GoogleApi
@@ -140,41 +111,20 @@ to you user domain class.
 In your view you can use the taglib exposed from this plugin and from OAuth plugin to create links and to know if the user is authenticated with a given provider:
 
 ```xml
-<oauth:connect provider="twitter" id="twitter-connect-link">Twitter</oauth:connect>
-<oauth:connect provider="facebook" id="facebook-connect-link">Facebook</oauth:connect>
 <oauth:connect provider="google" id="google-connect-link">Google</oauth:connect>
-<oauth:connect provider="linkedin" id="linkedin-connect-link">Linkedin</oauth:connect>
-<oauth:connect provider="yahoo" id="yahoo-connect-link">Yahoo</oauth:connect>
-Logged with facebook? <s2o:ifLoggedInWith provider="facebook">yes</s2o:ifLoggedInWith><s2o:ifNotLoggedInWith provider="facebook">no</s2o:ifNotLoggedInWith>
-Logged with twitter? <s2o:ifLoggedInWith provider="twitter">yes</s2o:ifLoggedInWith><s2o:ifNotLoggedInWith provider="twitter">no</s2o:ifNotLoggedInWith>
+
 Logged with google? <s2o:ifLoggedInWith provider="google">yes</s2o:ifLoggedInWith><s2o:ifNotLoggedInWith provider="google">no</s2o:ifNotLoggedInWith>
-Logged with linkedin? <s2o:ifLoggedInWith provider="linkedin">yes</s2o:ifLoggedInWith><s2o:ifNotLoggedInWith provider="linkedin">no</s2o:ifNotLoggedInWith>
-Logged with yahoo? <s2o:ifLoggedInWith provider="yahoo">yes</s2o:ifLoggedInWith><s2o:ifNotLoggedInWith provider="yahoo">no</s2o:ifNotLoggedInWith>
 ```
 
 Extensions
 ----------
 
-* [Facebook][spring-security-oauth-facebook-plugin]
 * [Google][spring-security-oauth-google-plugin]
-* [LinkedIn][spring-security-oauth-linkedin-plugin]
-* [Twitter][spring-security-oauth-twitter-plugin]
-* [VK][spring-security-oauth-vkontakte-plugin]
-* [Weibo][spring-security-oauth-weibo-plugin]
-* [Yahoo][spring-security-oauth-yahoo-plugin]
-* [Dailymotion][spring-security-oauth-dailymotion-plugin]
 
 That's it!
 
 [s2oauth-grails-website]: http://www.grails.org/plugin/spring-security-oauth
 [spring-security-plugin]: http://grails.org/plugin/spring-security-core
 [oauth-plugin]: http://grails.org/plugin/oauth
-[spring-security-oauth-facebook-plugin]: https://github.com/donbeave/grails-spring-security-oauth-facebook
-[spring-security-oauth-google-plugin]: https://github.com/donbeave/grails-spring-security-oauth-google
-[spring-security-oauth-linkedin-plugin]: https://github.com/donbeave/grails-spring-security-oauth-linkedin
-[spring-security-oauth-twitter-plugin]: https://github.com/donbeave/grails-spring-security-oauth-twitter
-[spring-security-oauth-vkontakte-plugin]: https://github.com/donbeave/grails-spring-security-oauth-vkontakte
-[spring-security-oauth-weibo-plugin]: https://github.com/donbeave/grails-spring-security-oauth-weibo
-[spring-security-oauth-yahoo-plugin]: https://github.com/donbeave/grails-spring-security-oauth-yahoo
-[spring-security-oauth-dailymotion-plugin]: https://github.com/tamershahin/grails-spring-security-oauth-dailymotion
+[spring-security-oauth-google-plugin]: https://github.com/nolifelover/grails-spring-security-oauth-google
 [spring-security-oauth-origin]: https://github.com/enr/grails-spring-security-oauth
