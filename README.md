@@ -13,7 +13,7 @@ Please, see [Grails plugin portal][s2oauth-grails-website] for instructions abou
 Changelog
 ---------
 
-**2.0.1.1 (for spring-security-core:1.2.7.3)**
+**2.0.1.2 (for spring-security-core:1.2.7.3)**
 
 This version is maintain support for old spring-security-core 1.2.7.3, fork from [spring-security-oauth-origin] current support version 2.0.2
 
