@@ -15,7 +15,7 @@ Changelog
 
 **2.0.1.2 (for spring-security-core:1.2.7.3)**
 
-This version is maintain support for old spring-security-core 1.2.7.3, fork from [spring-security-oauth-origin] current support version 2.0.2
+This version is maintain support for old spring-security-core 1.2.7.3, fork from [Spring Security OAuth][spring-security-oauth-origin] current support version 2.0.2
 
 Version provider's service and token are moved into separate plugin, example:
 
@@ -31,14 +31,14 @@ In `BuildConfig.groovy`, add the dependency to "plugins" section:
 
     plugins {
         //...
-        compile ':spring-security-oauth:2.0.1.1'
+        compile ':spring-security-oauth:2.0.1.2'
 
         // and also you need add at least one of extensions:
-        compile ':spring-security-oauth-facebook:0.1'
-        compile ':spring-security-oauth-google:0.1'
-        compile ':spring-security-oauth-linkedin:0.1'
-        compile ':spring-security-oauth-twitter:0.1'
-        compile ':spring-security-oauth-yahoo:0.1'
+        compile ':spring-security-oauth-facebook:0.2'
+        compile ':spring-security-oauth-google:0.2'
+        compile ':spring-security-oauth-linkedin:0.2'
+        compile ':spring-security-oauth-twitter:0.2'
+        compile ':spring-security-oauth-yahoo:0.2'
         //...
     }
 ```
@@ -50,24 +50,6 @@ Usage
 -----
 
 Install the plugin as described above by adding a dependency in BuildConfig.groovy. Then follow Spring Security Core and OAuth plugins documentation.
-
-Sample configuration for Spring Security Core request mapping:
-
-```groovy
-grails.plugin.springsecurity.securityConfigType = "InterceptUrlMap"
-grails.plugin.springsecurity.interceptUrlMap = [
-    '/':                ['permitAll'],
-    '/index':           ['permitAll'],
-    '/index.gsp':       ['permitAll'],
-    '/**/js/**':        ['permitAll'],
-    '/**/css/**':       ['permitAll'],
-    '/**/images/**':    ['permitAll'],
-    '/**/favicon.ico':  ['permitAll'],
-    '/login/**':        ['permitAll'],
-    '/logout/**':       ['permitAll'],
-    '/oauth/**':        ['permitAll']
-]
-```
 
 Sample configuration for OAuth plugin (each provider needs the proper spring-security-oauth-* plugin):
 
@@ -195,4 +177,4 @@ That's it!
 [spring-security-oauth-weibo-plugin]: https://github.com/donbeave/grails-spring-security-oauth-weibo
 [spring-security-oauth-yahoo-plugin]: https://github.com/donbeave/grails-spring-security-oauth-yahoo
 [spring-security-oauth-dailymotion-plugin]: https://github.com/tamershahin/grails-spring-security-oauth-dailymotion
-[spring.security.oauth-origin]: https://github.com/enr/grails-spring-security-oauth
+[spring-security-oauth-origin]: https://github.com/enr/grails-spring-security-oauth

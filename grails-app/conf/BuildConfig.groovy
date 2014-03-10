@@ -31,6 +31,11 @@ grails.project.dependency.resolution = {
         //compile ":codenarc:0.20"
 
         //build ':release:3.0.0'
+        build(":tomcat:$grailsVersion",
+              ":release:2.2.1",
+              ":rest-client-builder:1.0.3") {
+            export = false
+        }
     }
 }
 /*
