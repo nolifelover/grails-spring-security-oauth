@@ -25,7 +25,7 @@ grails.project.dependency.resolution = {
 
     plugins {
         compile ":spring-security-core:1.2.7.3"
-        compile ":oauth:2.4", {
+        compile ":oauth:2.4.1", {
             transitive = false
         }
         //compile ":codenarc:0.20"
