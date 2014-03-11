@@ -20,7 +20,7 @@ grails.project.dependency.resolution = {
     }
 
     dependencies {
-        runtime "org.scribe:scribe:1.3.5"
+        runtime "org.scribe:scribe:1.3.5-google"
     }
 
     plugins {
